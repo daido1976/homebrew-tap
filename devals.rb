@@ -5,20 +5,20 @@
 class Devals < Formula
   desc ""
   homepage ""
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/daido1976/devals/releases/download/v0.1.1/devals_Darwin_x86_64.tar.gz"
-      sha256 "c1141dc0d6d113e74a8fe7b0d19a034c0a4e64a1996851a73a4088ba9de3bba9"
+      url "https://github.com/daido1976/devals/releases/download/v0.1.2/devals_Darwin_x86_64.tar.gz"
+      sha256 "1eb805b00a1fef337bcdd5fce5df12d8627f1fd2b62c33627d980c726f380685"
 
       def install
         bin.install "devals"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/daido1976/devals/releases/download/v0.1.1/devals_Darwin_arm64.tar.gz"
-      sha256 "d3f64eed21558573dc13982c538451d1ba9e91c68dd3a1515f1a3a14309196e1"
+      url "https://github.com/daido1976/devals/releases/download/v0.1.2/devals_Darwin_arm64.tar.gz"
+      sha256 "d501fbae26a7edc90fc95012465b09d2fb8ebf8353982577f04b6dd1785b4275"
 
       def install
         bin.install "devals"
@@ -27,17 +27,17 @@ class Devals < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/daido1976/devals/releases/download/v0.1.1/devals_Linux_arm64.tar.gz"
-      sha256 "21d584c138fe29d4bda91d944da08e590b4a52e2fe45daee2a4476330d2a58d4"
+    if Hardware::CPU.intel?
+      url "https://github.com/daido1976/devals/releases/download/v0.1.2/devals_Linux_x86_64.tar.gz"
+      sha256 "b6e9439ff612b7a1b28f286ab4100e34fc3da2900964de677096f40fe0f98e6a"
 
       def install
         bin.install "devals"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/daido1976/devals/releases/download/v0.1.1/devals_Linux_x86_64.tar.gz"
-      sha256 "ce03f82ea88560a764ad301af1163b88e56c53e4a655165976f80dc42cc10f4b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/daido1976/devals/releases/download/v0.1.2/devals_Linux_arm64.tar.gz"
+      sha256 "9fcd0aa5cb00ff2173fba43dd03d9559ca2ee3aaa9bfe272fa5e4a88151ddd5d"
 
       def install
         bin.install "devals"
